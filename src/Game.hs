@@ -28,7 +28,6 @@ stepEnv gs@GS{..} = GS pVel'' pPos' as3 seed' dir (frame + 1)
 
         (nn, s0) = randomR (0, 6) seed
 
-        sizes :: [Int]
         (sizes, s1) = runState
             (replicateM nn $ state (randomR (50, 200))) s0
 

@@ -39,6 +39,10 @@ getDir ev = do
             KeycodeA -> Just L
             KeycodeD -> Just R
             KeycodeS -> Just B
+            KeycodeLeft -> Just L
+            KeycodeRight -> Just R
+            KeycodeDown -> Just B
+            KeycodeSpace -> Just B
             _ -> Nothing
 
     modify' $ \g -> g {dir = dir'} 
@@ -63,5 +67,3 @@ drawGame rend = do
                 xpos' = fromIntegral xpos
                 ypos' = fromIntegral ypos
                 l = fromIntegral asize
-
-
